@@ -1,0 +1,501 @@
+body{
+    background: linear-gradient(to bottom right, #fbd4ff, #f59eff);
+    min-height: 100vh;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 
+    "navbar"
+    "main";
+}
+
+.bungee-shade-regular {
+    font-family: "Bungee Shade", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.navbar-container{
+    grid-area: navbar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 20px; */
+}
+
+.navbar{
+    width: 90%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+
+    background-color: rgb(252, 235, 255);
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px #00000074;
+}
+
+.button-box{
+    height: 80%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:10px;
+}
+
+#home-title {
+    margin: 0;
+    padding-left: 25px;
+    padding-bottom: 30px;
+    font-size: clamp(2rem, 3.5vw, 4rem);
+    font-family: "Bungee Shade", sans-serif;
+}
+
+.navbar-button{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50px;
+    text-decoration: none;
+    /* font-size: 90%; */
+    font-size: clamp(2rem, 3.5vw, 4rem);
+    box-shadow: 4px 4px 4px #00000074, -4px -4px 4px #ffffff77;
+    font-family: "Bungee Shade";
+    color: black;
+    transition: .5s;
+}
+
+.navbar-button:hover{
+    box-shadow: inset 4px 4px 4px #00000074, inset -4px -4px 4px #ffffff77;
+    font-size: 40px;
+}
+
+.main-content{
+    grid-area: main;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#hidden-label{
+    display: none;
+}
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 85%;
+    width: 45%;
+
+    background-color: rgb(252, 235, 255);
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px #00000074;
+
+    font-family: "Bungee Shade";
+
+}
+
+h1{
+    font-family: "Bungee Shade";
+    font-size: 50px;
+}
+
+h2{
+    font-family: "Bungee Shade";
+    font-size: 60px;
+    padding-left: 25px;
+    padding-top: 25px;
+    margin: 0px;
+}
+
+p{
+    margin: 0;
+    padding-left: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+
+.box-title-top{
+    font-size: 80px;
+}
+
+.box-title-bottom{
+    font-size: 80px;
+    padding-top: 0;
+}
+
+.symbol-input-container{
+    padding-top: 100px;
+    align-self:center;
+
+    display: flex;
+    align-items: center;
+}
+
+#symbol-input{
+ /* From Uiverse.io by cohencoo */ 
+    border-radius: 10px;
+    outline: 2px solid #f59eff;
+    border: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #fbd4ff;
+    outline-offset: 3px;
+    padding: 10px 1rem;
+    transition: 0.25s;
+
+    margin-right: 10px;
+
+}
+  
+#symbol-input:focus {
+    outline-offset: 5px;
+    background-color: #fff
+}
+
+.top-markets-bins{
+    height: 75%;
+    width: 90%;
+    margin-top: 20px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: space-evenly;
+    gap: 10px;
+    overflow: auto; 
+}
+
+.top-markets-bins::-webkit-scrollbar {
+    display: none;
+  }
+
+.top-market-bin{
+    border-radius: 50px;
+    height: 30%;
+    width: 100%;
+    box-shadow: inset 4px 4px 4px #00000074, inset -4px -4px 4px #ffffff77;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.top-market-bin:hover{
+    cursor: pointer;
+}
+
+h3{
+    font-family: "Bungee Shade";
+    font-size: 30px;
+    height: 50%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    padding: 30px
+}
+
+h4 {
+    font-family: "Bungee Shade";
+    font-size: 30px;
+    height: 50%;
+    width: 30%;
+    display: flex;
+    align-items: center; 
+}
+
+canvas{
+    height: 80%;
+    width: 60%;
+}
+
+.search-section{
+    grid-area: search;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticker-search-box{
+    height: 200px;
+    width: 300px;
+    background-color: rgb(252, 235, 255);
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px #00000074;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#ticker-search-title{
+    font-size: 20px;
+    width: 90%;
+    margin:0;
+    margin-left: 25px;
+}
+
+#tracker-page-main{
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: 300px 1fr;
+    grid-template-areas:
+    "search main"
+    "sidebar main";
+}
+
+.ticker-search-container{
+    padding-top: 20px;
+    align-self: center;
+}
+
+.main-data{
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 100%;
+    padding-top: 5px;
+}
+
+.data-container{
+    height: 85%;
+    width: 90%;
+    background-color: rgb(252, 235, 255);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    box-shadow: 10px 10px 10px #00000074;
+}
+
+.sidebar-container{
+    grid-area: sidebar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar{
+    width:300px;
+    height: 300px;
+    background-color: rgb(252, 235, 255);
+    border-radius: 50px;
+    margin-bottom: 45px;
+
+    box-shadow: 10px 10px 10px #00000074;
+}
+
+.graph-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+}
+
+#tracking-container {
+	width: 45%;
+}
+
+#top-markets-container {
+	width: 45%;
+}
+
+#current-price-title {
+    font-size: 20px;
+}
+
+#percent-change-title{
+    font-size: 20px;
+}
+
+.percent-change-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    height: 45%;
+}
+
+.current-price-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    height: 45%;
+}
+
+#percent-change{
+    margin-top: 10px;
+}
+
+/* From Uiverse.io by Yaya12085 */ 
+.interval-selector {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: #fbd4ff;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    width: 500px;
+    font-size: 14px;
+  }
+  
+  .interval-selector .radio {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  
+  .interval-selector .radio input {
+    display: none;
+  }
+  
+  .interval-selector .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: none;
+    padding: .5rem 0;
+    color: black;
+    transition: all .15s ease-in-out;
+  }
+  
+  .interval-selector .radio input:checked + .name {
+    background-color: rgb(252, 235, 255);
+    font-weight: 600;
+  }
+
+  #current-price{
+    font-size: 50px;
+    margin-top: 10px;
+  }
+
+  .search-btn {
+    width: 30%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 20px; 
+    font-family: "Bungee Shade";
+    color: black;
+    transition: .5s;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-left: 1px;
+
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+   }
+   
+   .search-btn:hover {
+       font-size: 16px;
+    }
+    
+    .input-with-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    
+    #pop-stocks-title{
+        font-size: 40px;
+    }
+/*window resizing*/
+@media (max-width: 970px) {
+	.main-content {
+		flex-wrap: wrap;
+		margin-top: 20px;
+	}
+	.navbar {
+		width: 90%;/*100*/
+	}
+	#home-title {
+		font-size: 30px;
+	}
+	.button-box {
+        width:50%;
+		padding-right: 10px;
+		gap: 10px;
+	}
+	.navbar-button {
+		width: 200px;
+		/* font-size: 40px; */
+	}
+	#tracking-container {
+		margin-top: 20px;
+		width: 90%;
+	}
+	#top-markets-container {
+		/*margin: 20px;*/
+		width: 90%;
+	}
+	.content-container {
+		width: 100%;
+		align-items: center;
+	}
+	.search-btn {
+		font-size: 16px;
+	}
+    .interval-selector {
+        width: 80%
+    }
+    #tracker-page-main{
+        display:grid;
+        grid-template-rows: 300px 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "search sidebar"
+        "main main";
+
+        margin-top: 50px;
+    }
+    .data-container{
+        grid-area: main;
+        height: 500px;
+    }
+    .search-section{
+       grid-area: search;
+    }
+    .symbol-input-container{
+        grid-area: sidebar;
+    }
+    .ticker-search-box{
+        height: 300px;
+        width: 85%;
+        margin-bottom: 45px;
+        margin-left: 22px;
+    }
+    .sidebar{
+        width: 85%;
+        margin-right: 22px;
+    }
+}
+

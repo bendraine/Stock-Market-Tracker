@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <script src="/track.js" charset="UTF-8" defer></script>
+    <script src="/common.js" charset="UTF-8" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Track Symbol</title>
+</head>
+<body>
+    <div class="navbar-container">
+        <div class="navbar">
+            <h2 id="home-title">Market Tracker</h2>
+            <div class="button-box">
+                <a href="index.html" class="navbar-button" id="home-button">Home</a>
+                <a href="track.html" class="navbar-button" id="track-button">Track</a>
+            </div>
+        </div>
+    </div>
+    <div class="main-content" id="tracker-page-main">
+        <div class="search-section">
+            <div class="ticker-search-box">
+                <h4 id="ticker-search-title">Enter Ticker Symbol</h4>
+                <div class="ticker-search-container">
+                    <form id="symbol-form">
+                        <label for="symbol-input" id="hidden-label">Enter Symbol...</label>
+                        <div class="input-with-button">
+                        <input type="text" id="symbol-input" name="symbol" placeholder="Enter Symbol...">
+                        <button type="submit" class="search-btn">Go</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container">
+             <div class="sidebar">
+                <div class="current-price-container">
+                    <h2 id="current-price-title">Current Price:</h2>
+                    <p id="current-price"></p>
+                </div>
+                <div class="percent-change-container">
+                    <h2 id="percent-change-title">Percent Change:</h2>
+                    <p id="percent-change"></p>
+                </div>
+             </div>
+        </div>
+        <div class="main-data">
+            <div class="data-container">
+                <div class="graph-container">
+                 <canvas id="main-graph"></canvas>
+                </div>
+                <div class="interval-selector"> 
+                <label class="radio">
+                    <input type="radio" id="one-day" name="interval" value="1d" checked> 
+                    <span class="name">1 Day</span>
+                </label>
+
+                <label class="radio">
+                    <input type="radio" id="five-days" name="interval" value="5d"> 
+                    <span class="name">5 Day</span>
+                </label>
+
+                <label class="radio">
+                    <input type="radio" id="one-month" name="interval" value="1mo"> 
+                    <span class="name">1 Month</span>
+                </label>
+
+                <label class="radio">
+                    <input type="radio" id="six-months" name="interval" value="6mo"> 
+                    <span class="name">6 Months</span>
+                </label>
+
+                <label class="radio">
+                    <input type="radio" id="one-year" name="interval" value="1y"> 
+                    <span class="name">1 Year</span>
+                </label>
+
+                <label class="radio">
+                    <input type="radio" id="all" name="interval" value="all"> 
+                    <span class="name">All</span>
+                </label>
+                </div>
+             </div>
+        </div>
+    </div>
+</body>
+</html>

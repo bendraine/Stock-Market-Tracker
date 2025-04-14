@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <script src="/index.js" charset="UTF-8" defer></script>
+    <script src="/common.js" charset="UTF-8" defer></script>
+    <title>Market Tracker</title>
+</head>
+<body>
+    <div class="navbar-container">
+    <div class="navbar">
+        <h2 id="home-title">Market Tracker</h2>
+        <div class="button-box">
+        <a href="index.html" class="navbar-button" id="home-button">Home</a>
+        <a href="track.html" class="navbar-button" id="track-button">Track</a>
+        </div>
+    </div>
+    </div>
+    <div class="main-content">
+    <div class="content-container" id="tracking-container">
+        <h2 class="box-title-top">Enter</h2>
+        <h2 class="box-title-bottom">Symbol</h2>
+        <p>And We'll Do The Rest</p>
+        <div class="symbol-input-container">
+           <form id="symbol-form-home">
+                <label for="symbol-input" id="hidden-label">Enter Symbol...</label>
+                <div class="input-with-button">
+                    <input type="text" id="symbol-input" name="symbol" placeholder="Enter Symbol...">
+                    <button type="submit" class="search-btn" id="search-btn" data-target="/track.html">Go</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="content-container" id="top-markets-container">
+        <h2 id="pop-stocks-title">Popular Stocks</h2>
+        <div class="top-markets-bins">
+            <div class="top-market-bin" id="place1">
+                <h3 id="top1"></h3>
+                <p id="top1-pc"></p>
+            </div>
+            <div class="top-market-bin" id="place2">
+                <h3 id="top2"></h3>
+                <p id="top2-pc"></p>
+            </div>
+            <div class="top-market-bin" id="place3">
+                <h3 id="top3"></h3>
+                <p id="top3-pc"></p>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+</body>
+</html>
